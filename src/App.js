@@ -5,8 +5,8 @@ export const App = () => {
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {
-    setStoryIds('hello');
+    getStoryIds().then(data => setStoryIds(data))
   }, []);
 
-  return <p>{storyIds}</p>;
+  return <p>{JSON.stringify(storyIds)}</p>;
 };
