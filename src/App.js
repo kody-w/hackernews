@@ -1,5 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getStoryIds } from "./services/hnApi";
 
 export const App = () => {
-  return <p>Hello</p>;
+  const [storyIds, setStoryIds] = useState([]);
+
+  useEffect(() => {
+    setStoryIds('hello');
+  }, []);
+
+  return <p>{storyIds}</p>;
 };
